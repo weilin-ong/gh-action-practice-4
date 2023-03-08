@@ -9,9 +9,9 @@ env:
 jobs:
   test:
     env: 
-      MONGODB_CLUSTER_ADDRESS: solo-project-1.nftdc.mongodb.net
-      MONGODB_USERNAME: admin-weilin
-      MONGODB_PASSWORD: QsFFMjZ5shU1rWEy
+      MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME}}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD}}
       PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
